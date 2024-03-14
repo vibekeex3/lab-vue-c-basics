@@ -1,47 +1,48 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+import TestVisibleElement from './components/TestVisibleElement.vue'
+import ListOfElements from './components/ListOfElements.vue'
+import ChangeColorDynamically from './components/ChangeColorDynamically.vue'
+
+import { ref, computed } from 'vue';
+
+const reactiveVarOne = ref(5); // Define reactive variables using ref
+const reactiveVarTwo = ref(3);
+
+const computedString = computed(() => {
+  // Perform some operation with reactive variables
+  return `My reactive variables are ${reactiveVarOne.value} and ${reactiveVarTwo.value}. The sum of which equals: ${reactiveVarOne.value + reactiveVarTwo.value}`
+})
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+  <header>
+    <Navbar />
   </header>
 
   <main>
-    <TheWelcome />
-  </main>
+    <!-- ITERATION 2 -->
+    <p>The result of the mathematical operation 2 + 2 is {{ 2 + 2 }}</p>
+    <div>
+      <!-- Call a function to return a computed string -->
+      {{ computedString }}
+    </div>
+
+    <!-- ITERATION 3 -->
+    <TestVisibleElement />
+       <!-- ITERATION 4 -->
+    <ListOfElements />
+       <!-- BONUS ITERATION 5 -->
+    <ChangeColorDynamically />
+    
+</main>
+  <footer>
+    <Footer />
+  </footer>
+
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<style scoped></style>

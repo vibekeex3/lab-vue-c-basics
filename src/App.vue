@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import TestVisibleElement from './components/TestVisibleElement.vue'
+import ListOfElements from './components/ListOfElements.vue'
 
 
 import { ref, computed } from 'vue';
@@ -10,8 +11,8 @@ const reactiveVarOne = ref(5); // Define reactive variables using ref
 const reactiveVarTwo = ref(3);
 
 const computedString = computed(() => {
-    // Perform some operation with reactive variables
-    return `My reactive variables are ${reactiveVarOne.value} and ${reactiveVarTwo.value}. The sum of which equals: ${reactiveVarOne.value + reactiveVarTwo.value}`
+  // Perform some operation with reactive variables
+  return `My reactive variables are ${reactiveVarOne.value} and ${reactiveVarTwo.value}. The sum of which equals: ${reactiveVarOne.value + reactiveVarTwo.value}`
 })
 
 </script>
@@ -26,10 +27,11 @@ const computedString = computed(() => {
 
     <p>The result of the mathematical operation 2 + 2 is {{ 2 + 2 }}</p>
     <div>
-        <!-- Call a function to return a computed string -->
-        {{ computedString }}
+      <!-- Call a function to return a computed string -->
+      {{ computedString }}
     </div>
     <TestVisibleElement />
+    <ListOfElements />
   </main>
 
   <footer>
@@ -38,6 +40,4 @@ const computedString = computed(() => {
 
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

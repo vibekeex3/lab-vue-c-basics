@@ -33,6 +33,10 @@ const myPosts = reactive([
 </template>
 
 <style scoped>
+*  {
+  background-color:lemonchiffon;
+}
+
 ul {
     list-style-type: none;
 }

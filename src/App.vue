@@ -3,7 +3,7 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import TestVisibleElement from './components/TestVisibleElement.vue'
 import ListOfElements from './components/ListOfElements.vue'
-
+import ChangeColorDynamically from './components/ChangeColorDynamically.vue'
 
 import { ref, computed } from 'vue';
 
@@ -24,16 +24,21 @@ const computedString = computed(() => {
   </header>
 
   <main>
-
+    <!-- ITERATION 2 -->
     <p>The result of the mathematical operation 2 + 2 is {{ 2 + 2 }}</p>
     <div>
       <!-- Call a function to return a computed string -->
       {{ computedString }}
     </div>
-    <TestVisibleElement />
-    <ListOfElements />
-  </main>
 
+    <!-- ITERATION 3 -->
+    <TestVisibleElement />
+       <!-- ITERATION 4 -->
+    <ListOfElements />
+       <!-- BONUS ITERATION 5 -->
+    <ChangeColorDynamically />
+    
+</main>
   <footer>
     <Footer />
   </footer>
